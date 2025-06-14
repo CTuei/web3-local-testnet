@@ -1,6 +1,15 @@
 # 🛍️ Web3 DApp
 
-Aplikasi Web3 (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital (Course & E-book) dan menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
+Aplikasi Web3 (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital serta menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
+
+## 🚧 Status Proyek: Dalam Tahap Pengembangan
+
+Aplikasi ini masih dalam proses pengembangan.  
+Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-waktu.
+
+> 💡 Silakan laporkan masalah atau beri saran melalui [Issues](https://github.com/Fruzh/web3-local-testnet/issues).
+
+---
 
 ## 📁 Struktur Folder
 
@@ -42,21 +51,14 @@ cd web3-local-testnet
 ```
 
 ### 2. 📦 Install Dependency
-**Untuk smart contract (Hardhat):**
+**Untuk smart contract (Hardhat) & frontend (React):**
 ```bash
-cd solidity
-npm install
+npm run install
 ```
 
 **Jika belum pernah install Hardhat di proyek ini:**
 ```bash
-npm install --save-dev hardhat
-```
-
-**Untuk frontend React:**
-```bash
-cd ../react
-npm install
+npm run install:hardhat
 ```
 
 Ini akan menjalankan jaringan lokal di `http://127.0.0.1:8545` dan menampilkan 20 akun beserta private key-nya.
@@ -69,7 +71,7 @@ Account #0: 0x5Fb... (Private Key: 0xabc...)
 
 ---
 
-## 🦊 Hubungkan Metamask
+## 3. 🦊 Hubungkan Metamask
 
 1. **Install Extension Metamask** di [metamask.io](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
 2. **Import Akun** dari terminal Hardhat:
@@ -88,17 +90,16 @@ Account #0: 0x5Fb... (Private Key: 0xabc...)
 
 ---
 
-## 📦 Deploy Smart Contract
+## 3. 📦 Deploy Smart Contract & Menjalankan Frontend (React DApp)
 
 ```bash
-cd solidity
-npx hardhat node
+npm run start
 ```
 
 Buka terminal baru:
 
 ```bash
-npx hardhat run scripts/deploy.js --network localhost
+npm run deploy
 ```
 
 Ini akan:
@@ -107,18 +108,7 @@ Ini akan:
 - Generate file `contract-address.json` dan `contract-abi.json`
 - Simpan alamat contract ke: `react/src/contracts/contract-address.json`
 - Simpan ABI ke:  `react/src/contracts/contract-abi.json`
-
----
-
-### 4. Jalankan Frontend (React dApp)
-
-```bash
-cd ../react
-npm install
-npm run dev
-```
-
-Aplikasi akan tersedia di `http://localhost:5173`
+- Aplikasi akan berjalan di `http://localhost:5173`
 
 ---
 

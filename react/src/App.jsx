@@ -7,13 +7,13 @@ import contractData from "./contracts/contract-address.json";
 import TokoDigital from "./contracts/TokoDigital.json";
 import seederData from "./seeders/seeder.json";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./Header";
-import AdminSidebar from "./AdminSidebar";
-import ProductCard from "./ProductCard";
-import SkeletonProductCard from "./SkeletonProductCard";
-import ProductForm from "./ProductForm";
-import PurchaseHistory from "./PurchaseHistory";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import AdminSidebar from "./components/AdminSidebar";
+import ProductCard from "./components/ProductCard";
+import SkeletonProductCard from "./components/SkeletonProductCard";
+import ProductForm from "./components/ProductForm";
+import PurchaseHistory from "./components/PurchaseHistory";
+import Footer from "./components/Footer";
 
 const ErrorBoundary = ({ children }) => {
 	const [hasError, setHasError] = useState(false);

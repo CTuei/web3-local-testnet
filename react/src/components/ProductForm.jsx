@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { toast } from "react-toastify";
 import { BrowserProvider, Contract, parseEther } from "ethers";
-import contractData from "./contracts/contract-address.json";
-import TokoDigital from "./contracts/TokoDigital.json";
+import contractData from "../contracts/contract-address.json";
+import TokoDigital from "../contracts/TokoDigital.json";
 
 const ProductForm = ({
     formProduk,
