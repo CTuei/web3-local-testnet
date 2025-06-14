@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "nama": "UI UX Design Course",
+            "harga": "0.01",
+            "deskripsi": "Kursus desain UI/UX lengkap",
+            "gambar": "https://img.freepik.com/free-vector/flat-design-coworking-app-template_23-2150249512.jpg"
+        },
+        {
+            "nama": "Solidity Basics",
+            "harga": "0.02",
+            "deskripsi": "Belajar pemrograman smart contract",
+            "gambar": "https://www.dappuniversity.com/solidity-tutorial/remix.png"
+        },
+        {
+            "nama": "Web3 Development",
+            "harga": "0.015",
+            "deskripsi": "Kursus pengembangan DApp",
+            "gambar": "https://unicsoft.com/wp-content/uploads/2022/11/1140.png"
+        }
+    ]
+}

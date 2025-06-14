@@ -1,0 +1,532 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pemilik",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "jumlah",
+          "type": "uint256"
+        }
+      ],
+      "name": "DanaDitarik",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pemilik",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "jumlahProduk",
+          "type": "uint256"
+        }
+      ],
+      "name": "KontrakDireset",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pembeli",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "produkId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "harga",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProdukDibeli",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "nama",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "harga",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "deskripsi",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "gambar",
+          "type": "string"
+        }
+      ],
+      "name": "ProdukDitambahkan",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "nama",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "harga",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "deskripsi",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "aktif",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "gambar",
+          "type": "string"
+        }
+      ],
+      "name": "ProdukDiupdate",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "beliProduk",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pembeli",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "cekStatusBeli",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPemilik",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pembeli",
+          "type": "address"
+        }
+      ],
+      "name": "getRiwayatPembelian",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "produkId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TokoDigital.Pembelian[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getSaldoKontrak",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getSemuaProduk",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "nama",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "harga",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "deskripsi",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "aktif",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "gambar",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct TokoDigital.Produk[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pemilik",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "produk",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "nama",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "harga",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "deskripsi",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "aktif",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "gambar",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "produkIdBerikutnya",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "nama",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "harga",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "deskripsi",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "aktif",
+              "type": "bool"
+            },
+            {
+              "internalType": "string",
+              "name": "gambar",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct TokoDigital.Produk[]",
+          "name": "_seededProduk",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "resetContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "riwayatPembelian",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "produkId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "statusBeli",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_nama",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_harga",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_deskripsi",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_gambar",
+          "type": "string"
+        }
+      ],
+      "name": "tambahProduk",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "tarikDana",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_nama",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_harga",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_deskripsi",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "_aktif",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "_gambar",
+          "type": "string"
+        }
+      ],
+      "name": "updateProduk",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
