@@ -34,7 +34,7 @@ project-root/
 
 Pastikan sudah meng-install:
 
-- [Node.js](https://nodejs.org/) v16 atau lebih
+- [Node.js](https://nodejs.org/) v22 atau lebih
 - [Metamask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) di browser (Chrome/Brave/Edge)
 - Git
 - VS Code atau text editor lain

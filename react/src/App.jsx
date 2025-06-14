@@ -345,14 +345,14 @@ function App() {
 				<main className={`pt-16 ${isOwner && walletConnected ? "lg:ml-64" : ""} transition-all duration-300`}>
 					{!walletConnected ? (
 						<section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-100 to-gray-100">
-							<div className="text-center max-w-2xl px-4">
-								<h1 className="text-5xl font-bold text-gray-900 mb-6">Welcome to TokoCorp</h1>
+							<div className="text-center max-w-5xl px-4">
+								<h1 className="text-5xl font-bold text-gray-900 mb-6">Welcome to Web3 Digital Marketplace</h1>
 								<p className="text-lg text-gray-600 mb-8">
 									Discover premium digital products powered by blockchain technology. Connect your wallet to start shopping.
 								</p>
 								<button
 									onClick={handleConnectWallet}
-									className="bg-blue-600 text-white py-4 px-10 rounded-lg font-semibold text-lg hover:bg-blue-700 transition"
+									className="bg-blue-600 text-white py-4 px-10 rounded-xl font-semibold text-lg hover:bg-blue-700 transition"
 									title="Connect your wallet"
 								>
 									Connect Wallet

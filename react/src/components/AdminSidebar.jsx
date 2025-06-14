@@ -18,7 +18,7 @@ const AdminSidebar = ({ isOwner, walletConnected, saldoKontrak, handleTarikDana,
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Funds</h3>
                     <button
                         onClick={handleTarikDana}
-                        className={`w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition ${loading || saldoKontrak === "0" ? "opacity-50 cursor-not-allowed" : ""
+                        className={`w-full bg-indigo-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-indigo-700 transition ${loading || saldoKontrak === "0" ? "opacity-50 cursor-not-allowed" : ""
                             }`}
                         disabled={loading || saldoKontrak === "0"}
                         title="Withdraw all funds from the contract"
@@ -32,14 +32,14 @@ const AdminSidebar = ({ isOwner, walletConnected, saldoKontrak, handleTarikDana,
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Product</h3>
                     <button
                         onClick={() => setShowFormModal(true)}
-                        className="w-full bg-teal-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-teal-700 transition"
+                        className="w-full bg-teal-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-teal-700 transition"
                         title="Add a new product"
                     >
                         Add Product
                     </button>
                     <button
                         onClick={handleResetKontrak}
-                        className={`w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition ${loading ? "opacity-50 cursor-not-allowed" : ""
+                        className={`w-full bg-red-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-red-700 transition ${loading ? "opacity-50 cursor-not-allowed" : ""
                             }`}
                         disabled={loading}
                         title="Reset contract to seeder data"
@@ -53,7 +53,7 @@ const AdminSidebar = ({ isOwner, walletConnected, saldoKontrak, handleTarikDana,
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Wallet</h3>
                     <button
                         onClick={handleDisconnectWallet}
-                        className="w-full bg-gray-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-700 transition"
+                        className="w-full bg-gray-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-gray-700 transition"
                         title="Disconnect your wallet"
                     >
                         Disconnect Wallet
