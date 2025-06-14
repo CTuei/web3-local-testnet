@@ -13,13 +13,17 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 
 ## 🖼️ Preview Website
 
-| Landing Page | Dashboard |
-|--------------|-----------|
-| ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) | ![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
+**Landing Page**
+![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) 
 
-| Verifikasi Wallet | Edit Produk |
-|-------------------|-------------|
-| ![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) | ![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
+**Dashboard**
+![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
+
+**transaksi**
+![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) 
+
+**Edit Produk**
+![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
 
 ---
 
