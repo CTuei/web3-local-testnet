@@ -11,6 +11,18 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 
 ---
 
+## 🖼️ Preview Antarmuka
+
+| Landing Page | Edit Produk |
+|--------------|-------------|
+| ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) | ![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
+
+| Verifikasi Wallet | Dashboard |
+|-------------------|-----------|
+| ![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) | ![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
+
+---
+
 ## 📁 Struktur Folder
 
 ```
