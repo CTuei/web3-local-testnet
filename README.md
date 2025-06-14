@@ -11,15 +11,15 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 
 ---
 
-## 🖼️ Preview Antarmuka
+## 🖼️ Preview Website
 
-| Landing Page | Edit Produk |
-|--------------|-------------|
-| ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) | ![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
+| Landing Page | Dashboard |
+|--------------|-----------|
+| ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) | ![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
 
-| Verifikasi Wallet | Dashboard |
-|-------------------|-----------|
-| ![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) | ![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
+| Verifikasi Wallet | Edit Produk |
+|-------------------|-------------|
+| ![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) | ![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
 
 ---
 
