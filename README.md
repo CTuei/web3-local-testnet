@@ -1,6 +1,6 @@
 # 🛍️ Web3 DApp
 
-Aplikasi Web3 (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital serta menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
+Aplikasi Web3 DApp (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
 
 ## 🚧 Status Proyek: Dalam Tahap Pengembangan
 
