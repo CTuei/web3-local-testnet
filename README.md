@@ -81,8 +81,6 @@ Contoh akun:
 Account #0: 0x5Fb... (Private Key: 0xabc...)
 ```
 
----
-
 ## 3. 🦊 Hubungkan Metamask
 
 1. **Install Extension Metamask** di [metamask.io](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
@@ -100,9 +98,7 @@ Account #0: 0x5Fb... (Private Key: 0xabc...)
 
 4. Pilih jaringan "Hardhat" di Metamask.
 
----
-
-## 3. 📦 Deploy Smart Contract & Menjalankan Frontend (React DApp)
+## 4. 📦 Deploy Smart Contract & Menjalankan Frontend (React DApp)
 
 ```bash
 npm run start
