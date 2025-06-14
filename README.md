@@ -17,13 +17,13 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) 
 
 **Dashboard**
-![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png) |
+![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png)
 
 **transaksi**
 ![Verifikasi](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/verification.png) 
 
 **Edit Produk**
-![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png) |
+![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png)
 
 ---
 
