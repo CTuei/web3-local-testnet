@@ -95,7 +95,7 @@ contract TokoDigital {
         for (uint256 i = 0; i < _seededProduk.length; i++) {
             Produk memory p = _seededProduk[i];
             require(p.id > 0 && p.id <= _seededProduk.length, "ID produk tidak valid");
-            require(bytes(p.nama).length > 0, "Nama seeder tidak boleh kosong");
+            require(bytes(p.nama).length > 0, "Nama seeder tidak boleh kosong.");
             require(p.harga > 0, "Harga seeder harus lebih dari 0");
             require(bytes(p.deskripsi).length > 0, "Deskripsi seeder tidak boleh kosong");
 

@@ -1,12 +1,12 @@
 # 🛍️ Web3 DApp
 
-Aplikasi Web3 (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital (E-Book JavaScript) menggunakan Ethereum di jaringan lokal Hardhat.
+Aplikasi Web3 (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital (Course & E-book) dan menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
 
 ## 📁 Struktur Folder
 
 ```
 project-root/
-├── react-dapp/       # Frontend React (dApp)
+├── react/            # Frontend React (dApp)
 └── solidity/         # Smart contract + script deploy
 ```
 
@@ -15,8 +15,8 @@ project-root/
 ## 🚀 Fitur
 
 - 🔐 Autentikasi via wallet (Metamask)
-- 💸 Beli produk menggunakan ETH (0.01 ETH)
-- 🔄 Reset status pembelian (oleh pemilik contract)
+- 💸 Beli produk menggunakan Ethereum (ETH)
+- 🔄 Reset contract (oleh pemilik contract)
 - 📦 Smart contract sudah lengkap dengan ABI & auto-deploy address
 
 ---
@@ -37,8 +37,8 @@ Pastikan sudah meng-install:
 ### 1. Clone Project
 
 ```bash
-git clone https://github.com/Fruzh/solidity-local-testnet.git
-cd solidity-local-testnet
+git clone https://github.com/Fruzh/web3-local-testnet.git
+cd web3-local-testnet
 ```
 
 ### 2. 📦 Install Dependency
@@ -55,7 +55,7 @@ npm install --save-dev hardhat
 
 **Untuk frontend React:**
 ```bash
-cd ../react-dapp
+cd ../react
 npm install
 ```
 
@@ -105,15 +105,15 @@ Ini akan:
 
 - Deploy `TokoDigital.sol`
 - Generate file `contract-address.json` dan `contract-abi.json`
-- Simpan alamat contract ke: `react-dapp/src/contracts/contract-address.json`
-- Simpan ABI ke:  `react-dapp/src/contracts/contract-abi.json`
+- Simpan alamat contract ke: `react/src/contracts/contract-address.json`
+- Simpan ABI ke:  `react/src/contracts/contract-abi.json`
 
 ---
 
 ### 4. Jalankan Frontend (React dApp)
 
 ```bash
-cd ../react-dapp
+cd ../react
 npm install
 npm run dev
 ```
@@ -125,6 +125,6 @@ Aplikasi akan tersedia di `http://localhost:5173`
 ## 🛒 Cara Pakai Aplikasi
 
 1. Buka `http://localhost:5173`
-2. Klik **"🔌 Hubungkan Wallet"**
-3. Klik **"🛒 Beli Sekarang"** untuk membeli produk
+2. Klik **"Connect Wallet"**
+3. Klik **"Buy Now"** untuk membeli produk
 4. Jika kamu pemilik contract, tombol **Reset Pembelian** akan muncul

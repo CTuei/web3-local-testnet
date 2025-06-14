@@ -1,0 +1,8 @@
+{
+  "name": "web3-local-testnet",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd solidity && npx hardhat clean && npx hardhat compile && npx hardhat node",
+    "deploy": "cd solidity && npx hardhat run scripts/deploy.js --network localhost && cd ../react && npm run dev"
+  }
+}
