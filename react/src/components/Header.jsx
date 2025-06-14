@@ -1,19 +1,24 @@
 import { useCallback } from "react";
+import logo from "../assets/logo-indigo.png";
 
 const Header = ({ walletConnected, userAddress, handleConnectWallet, handleDisconnectWallet }) => (
     <header className="fixed top-0 left-0 w-full bg-white shadow-lg z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div className="flex items-center">
-                <img src="/assets/logo.png" alt="TokoCorp Logo" className="h-10 w-auto" />
+                <img src={logo} alt="TokoCorp Logo" className="h-10 w-auto" />
             </div>
             <nav className="hidden md:flex space-x-8">
-                {["Home", "Products", "About", "Contact"].map((item) => (
+                {[
+                    { label: "Home", href: "#" },
+                    { label: "Products", href: "#products" },
+                    { label: "My Orders", href: "#orders" },
+                ].map((item) => (
                     <a
-                        key={item}
-                        href={`#${item.toLowerCase()}`}
-                        className="text-gray-600 hover:text-blue-600 font-medium transition"
+                        key={item.label}
+                        href={item.href}
+                        className="text-gray-600 hover:text-indigo-600 font-medium transition"
                     >
-                        {item}
+                        {item.label}
                     </a>
                 ))}
             </nav>

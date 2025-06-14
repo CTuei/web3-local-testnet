@@ -203,16 +203,7 @@ const ProductForm = ({
                         )}
                     </div>
                 </div>
-                <div className="flex justify-end space-x-4">
-                    <button
-                        onClick={formProduk.id !== null ? handleUpdateProduk : handleTambahProduk}
-                        className={`flex-1 bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition duration-200 ${loading ? "opacity-50 cursor-not-allowed" : ""
-                            }`}
-                        disabled={loading}
-                        title={formProduk.id !== null ? "Update product" : "Add new product"}
-                    >
-                        {formProduk.id !== null ? "Update" : "Add"}
-                    </button>
+                <div className="flex justify-between items-center w-full">
                     <button
                         onClick={() => {
                             setFormProduk({ nama: "", harga: "", deskripsi: "", id: null, gambar: "" });
@@ -220,10 +211,19 @@ const ProductForm = ({
                             setFormErrors({});
                             setShowForm(false);
                         }}
-                        className="flex-1 bg-gray-300 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-400 transition duration-200"
+                        className="bg-gray-300 text-gray-800 py-3 px-6 rounded-xl font-semibold hover:bg-gray-400 transition duration-200"
                         title="Cancel changes"
                     >
                         Cancel
+                    </button>
+                    <button
+                        onClick={formProduk.id !== null ? handleUpdateProduk : handleTambahProduk}
+                        className={`bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transition duration-200 ${loading ? "opacity-50 cursor-not-allowed" : ""
+                            }`}
+                        disabled={loading}
+                        title={formProduk.id !== null ? "Update product" : "Add new product"}
+                    >
+                        {formProduk.id !== null ? "Update" : "Add"}
                     </button>
                 </div>
             </div>

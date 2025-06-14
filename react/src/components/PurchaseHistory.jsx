@@ -1,5 +1,5 @@
 const PurchaseHistory = ({ riwayatPembelian, expandedRiwayat, setExpandedRiwayat }) => (
-    <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 mb-12 lg:px-8">
+    <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 mb-12 lg:px-8" id="orders">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Purchase History</h2>
         {riwayatPembelian.length === 0 ? (
             <p className="text-gray-600 text-center text-lg">No purchases yet.</p>
