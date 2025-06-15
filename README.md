@@ -1,17 +1,17 @@
-# 🛍️ Web3 DApp
+# 🛍️ Web3 DApp Marketplace
 
-Aplikasi Web3 DApp (Decentralized Application) sederhana yang memungkinkan pengguna membeli produk digital menggunakan Ethereum Virtual Machine (EVM) sebagai blockchain di jaringan lokal Hardhat.
+A simple Web3 DApp (Decentralized Application) that allows users to purchase digital products using the Ethereum Virtual Machine (EVM) on a local Hardhat network.
 
-## 🚧 Status Proyek: Dalam Tahap Pengembangan
+## 🚧 Project Status: In Development
 
-Aplikasi ini masih dalam proses pengembangan.  
-Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-waktu.
+This project is still under active development.\
+Please expect bugs, incomplete features, or UI changes.
 
-> 💡 Silakan laporkan masalah atau beri saran melalui [Issues](https://github.com/Fruzh/web3-local-testnet/issues).
+> 💡 Feel free to report issues or suggest features via [Issues](https://github.com/Fruzh/web3-local-testnet/issues).
 
 ---
 
-## 🖼️ Preview Website
+## 🖼️ Website Preview
 
 **Landing Page**
 ![Landing](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/landing.png) 
@@ -19,7 +19,7 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 **Dashboard**
 ![Dashboard](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/purchased.png)
 
-**Edit Produk**
+**Edit Product**
 ![Edit](https://raw.githubusercontent.com/Fruzh/web3-local-testnet/refs/heads/master/react/src/assets/edit.png)
 
 **Transaction**
@@ -30,106 +30,111 @@ Harap maklum jika ada bug, fitur belum sempurna, atau tampilan berubah sewaktu-w
 
 ---
 
-## 📁 Struktur Folder
+## 📁 Project Structure
 
 ```
 project-root/
-├── react/            # Frontend React (dApp)
-└── solidity/         # Smart contract + script deploy
+├── react/            # Frontend (React dApp)
+└── solidity/         # Smart contracts & deployment scripts
 ```
 
 ---
 
-## 🚀 Fitur
+## 🚀 Features
 
-- 🔐 Autentikasi via wallet (Metamask)
-- 💸 Beli produk menggunakan Ethereum (ETH)
-- 🔄 Reset contract (oleh pemilik contract)
-- 📦 Smart contract sudah lengkap dengan ABI & auto-deploy address
+- 🔐 Authenticate via wallet (Metamask)
+- 💸 Purchase products using Ethereum (ETH)
+- 🔄 Reset purchases (admin only)
+- 📦 Smart contract includes ABI & auto-generated address
 
 ---
 
-## 🧰 Persyaratan
+## 🧰 Requirements
 
-Pastikan sudah meng-install:
+Make sure you have:
 
-- [Node.js](https://nodejs.org/) v22 atau lebih
-- [Metamask](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) di browser (Chrome/Brave/Edge)
+- [Node.js](https://nodejs.org/) v22+
+- [Metamask Extension](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
 - Git
-- VS Code atau text editor lain
+- VS Code or other text editor
 
 ---
 
-## 🔧 Cara Setup dari Awal
+## 🔧 Setup Guide
 
-### 1. Clone Project
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Fruzh/web3-local-testnet.git
 cd web3-local-testnet
 ```
 
-### 2. 📦 Install Dependency
-**Untuk smart contract (Hardhat) & frontend (React):**
+### 2. 📦 Install Dependencies
+
+**Install for both Hardhat (backend) & React (frontend):**
+
 ```bash
 npm run install
 ```
 
-**Jika belum pernah install Hardhat di proyek ini:**
+**If Hardhat hasn’t been installed yet in this project:**
+
 ```bash
 npm run install:hardhat
 ```
 
-Ini akan menjalankan jaringan lokal di `http://127.0.0.1:8545` dan menampilkan 20 akun beserta private key-nya.
+This will start a local blockchain at `http://127.0.0.1:8545` with 20 demo accounts.
 
-Contoh akun:
+Example account:
 
 ```
 Account #0: 0x5Fb... (Private Key: 0xabc...)
 ```
 
-## 3. 🦊 Hubungkan Metamask
+### 3. 🦊 Connect Metamask
 
-1. **Install Extension Metamask** di [metamask.io](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
-2. **Import Akun** dari terminal Hardhat:
-   - Import akun dengan Private Key:
-   **Account → Import Account**
-   - Tempelkan salah satu Private Key dari Hardhat
+1. **Install Metamask Extension** from [metamask.io](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
 
-3. **Tambahkan Network Lokal:**
+2. **Import an Account** from Hardhat output:
+
+   - Click "Import Account"
+   - Paste one of the private keys shown in your terminal
+
+3. **Add Local Network:**
 
    - Network Name: `Hardhat`
-   - New RPC URL: `http://127.0.0.1:8545`
+   - RPC URL: `http://127.0.0.1:8545`
    - Chain ID: `31337`
-   - Currency Symbol: `ETH`
+   - Symbol: `ETH`
 
-4. Pilih jaringan "Hardhat" di Metamask.
+4. Select the "Hardhat" network in Metamask.
 
-## 4. 📦 Deploy Smart Contract & Menjalankan Frontend (React DApp)
+### 4. 📦 Deploy Contracts & Run the dApp
 
 ```bash
 npm run start
 ```
 
-Buka terminal baru:
+In a new terminal:
 
 ```bash
 npm run deploy
 ```
 
-Ini akan:
+This will:
 
 - Deploy `TokoDigital.sol`
-- Generate file `contract-address.json` dan `contract-abi.json`
-- Simpan alamat contract ke: `react/src/contracts/contract-address.json`
-- Simpan ABI ke:  `react/src/contracts/contract-abi.json`
-- Aplikasi akan berjalan di `http://localhost:5173`
+- Generate:
+  - `contract-address.json`
+  - `contract-abi.json`
+- Store them in `react/src/contracts/`
+- Start the frontend on `http://localhost:5173`
 
 ---
 
-## 🛒 Cara Pakai Aplikasi
+## 🛒 How to Use
 
-1. Buka `http://localhost:5173`
-2. Klik **"Connect Wallet"**
-3. Klik **"Buy Now"** untuk membeli produk
-4. Jika kamu pemilik contract, tombol **Reset Pembelian** akan muncul
+1. Open `http://localhost:5173`
+2. Click **"Connect Wallet"**
+3. Click **"Buy Now"** to purchase a product
+4. If you are the contract owner, a **Reset Purchases** button will appear
