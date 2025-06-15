@@ -137,4 +137,4 @@ This will:
 1. Open `http://localhost:5173`
 2. Click **"Connect Wallet"**
 3. Click **"Buy Now"** to purchase a product
-4. If you are the contract owner, a **Reset Purchases** button will appear
+4. If you are the contract owner, a **Reset Contract** button will appear
